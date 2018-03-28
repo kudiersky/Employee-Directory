@@ -1,37 +1,52 @@
+$('#modal').hide()
 
-
-
-
-
+const results = 12;
 var SearchButton = document.getElementById('search');
 
-SearchButton.onclick = function () {
+getJSON();
 
+$("#employee-table").on("click", "td", function() {
+
+   });
+
+
+
+function getJSON() {
 
       $.ajax({
-          url: 'http://api.randomuser.me/?format=json',
+          url: 'http://api.randomuser.me/?format=json&results='+ results +'',
           dataType: 'jsonp',
           success: function (data) {
 
-            console.log(data)
-            var employeeHTML = '<th class="employee-item">'
-            employeeHTML += '<div class="employee-details">'
-            employeeHTML += '<img class="avatar" src=' + data.results[0].picture.large + '>'
-            employeeHTML += '<div class="Names">'
-            employeeHTML += '<span id = "employee-FName" class="bravos"><h2>' + data.results[0].name.first + '</h2></span>'
-            employeeHTML += '<span id = "employee-LName" class="bravos"><h2>' + data.results[0].name.last + '</h2></span>'
-            employeeHTML += '</div>'
-            employeeHTML += '<div class="furtherInfo">'
-            employeeHTML += '<span id = "employee-Email" class="bravos"><h2>' + data.results[0].email + '</h2></span><br>'
-            employeeHTML += '<span id = "employee-Town" class="bravos"><h2>' + data.results[0].location.city + '</h2></span>'
-            employeeHTML += '</div>'
-            employeeHTML += '</div>'
-            employeeHTML += '</th>'
+            var table = '';
+            var rows = 4;
+            var columns = 3;
+            var i = 0;
 
-            $('#employee-table').append(employeeHTML)
-
+            for(var r = 0; r < rows; r++)
+            {
+              table += '<tr>';
+                for(var c = 0; c < columns; c++)
+                {
+                  table += '<td id=' + i + 'class="employee-item">';
+                  table += '<div class="employee-details">';
+                  table += '<img class="avatar" src=' + data.results[i].picture.large + '>';
+                  table += '<div class="Names">';
+                  table += '<span id = "employee-FName" class="alphas"><h2>' + data.results[i].name.first + '</h2></span>';
+                  table += '<span id = "employee-LName" class="alphas"><h2>' + data.results[i].name.last + '</h2></span>';
+                  table += '</div>';
+                  table += '<div class="furtherInfo">';
+                  table += '<span id = "employee-Email" class="bravos"><h2>' + data.results[i].email + '</h2></span><br>';
+                  table += '<span id = "employee-Town" class="charlies"><h2>' + data.results[i].location.city + '</h2></span>';
+                  table += '</div>';
+                  table += '</div>';
+                  table += '</td>';
+                  i++
+                }
+                table += '</tr>';
 
             }
-
-          });
-      };
+              $('#employee-table').append(table)
+             } //end if success function
+          }); //end of ajax()
+        }; //end of search ()
