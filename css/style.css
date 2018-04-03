@@ -1,244 +1,219 @@
-body{
-  background-color: #F8F8F8;
-  font-family: serif;
-  color: #222;
+body {
+	background-color: #F8F8F8;
+	font-family: serif;
+	color: #222;
 }
 
-}
-.page{
-  margin: 50px auto;
-  background-color: #fff;
-  border-radius: 5px;
-  padding: 50px;
-}
 
-.container{
-  margin-left: 5%;
-  margin-right: 10%;
-  padding: 20px;
-  min-width: 850px;
 }
-
+.page {
+	margin: 50px auto;
+	background-color: #fff;
+	border-radius: 5px;
+	padding: 50px;
+}
+.container {
+	margin-left: 5%;
+	margin-right: 10%;
+	padding: 20px;
+	min-width: 850px;
+}
 table {
-  border-collapse:separate;
-border-spacing: 1em;
-  background-color: #F8F8F8;
-  color: #000000;
-  height: 600px;
+	border-collapse: separate;
+	border-spacing: 1em;
+	background-color: #F8F8F8;
+	color: #000000;
+	height: 600px;
 }
-
-table td, table th {
-  border-width: 2px;
-  border-radius: 4px;
-  min-width: 325px;
-  border-color: #c0c0c0;
-  background-color: #FFFFFF;
-  border-style: solid;
+table td,
+table th {
+	border-width: 2px;
+	border-radius: 4px;
+	min-width: 325px;
+	border-color: #c0c0c0;
+	background-color: #FFFFFF;
+	border-style: solid;
 }
-
-h2{
-  font-size: 10px;
-  font-weight: bold;
+h2 {
+	font-size: 10px;
+	font-weight: bold;
 }
-
-.page-header{
-  display: inline-block;
-  padding-top: 1em;
-  min-width: 620px;
-  margin-left: 8%;
-  padding-left: 20px;
+.page-header {
+	display: inline-block;
+	padding-top: 1em;
+	min-width: 620px;
+	margin-left: 8%;
+	padding-left: 20px;
 }
-  .page-header h2{
-    margin-top: 3em;
-    float: left;
-    font-size: 16px;
-    color: #555;
-  }
-
-  .employee-search{
-    position: absolute;
-    padding-left: 550px;
-    padding-top: 30px;
-  }
-
-    .page-header .employee-search input{
-      margin-left: 15em;
-      position: relative;
-      margin-top: 1em;
-      border-radius: 5px;
-      border: 1px solid #eaeaea;
-      padding: 8px 15px;
-      font-size: 14px;
-    }
-
-    th.employee-item{
-      border-color: #DCDCDC;
-      border-radius: 4px;
-      border-width: medium;
-    }
-
-    .page-header .employee-search button{
-      border-radius: 5px;
-      border: 1px solid #555;
-      font-size: 14px;
-      padding: 5px;
-      background-color: #555;
-      color: #fff
-    }
-
-.employee-list{
-  width:100%;
+.page-header h2 {
+	margin-top: 3em;
+	float: left;
+	font-size: 16px;
+	color: #555;
 }
-
-  .employee-item{
-    border: 2px solid #eaeaea;
-  }
-
-    .employee-details{
-      padding-left: 20px;
-      width: 100%;
-      height: 122px;
-      width: 320px;
-      float: left;
-    }
-
-      .employee-details .avatar{
-        display: block;
-        width: 100px;
-        height: auto;
-        border-radius: 50px;
-        float: left;
-        margin-top: 10px;
-      }
-
-      .Names h2{
-        padding-top: 12px;
-        font-size: 18px;
-      }
-
-      .furtherInfo h2{
-        color: grey;
-        padding-top: 12px;
-       font-size: 10px;
-      }
-
-
-      .alphas {
-          padding-top: 12px;
-          padding-bottom: 10px;
-          padding-right: 5px;
-          float: left;
-          display: inline-block;
-      }
-
-      .bravos {
-          padding-right: 5px;
-          float: left;
-          padding-bottom: -2px;
-          text-align: left;
-          color; #A9A9A9;
-      }
-
-      .Names{
-          padding-left: 60px;
-          position: absolute;
-          padding-top: 0px;
-          padding-left: 120px;
-      }
-
-
-      .furtherInfo{
-          position: absolute;
-          padding-top: 46px;
-          padding-left: 120px;
-      }
-
-    #modelback {
-      position: fixed;
-      opacity: 0.5;
-      top: 15%;
-      left: 7%;
-      width: 81%;
-      height: 74%;
-      background: #000;
-      text-align:center;
-    }
-
-    #modelfront {
-      top: 11%;
-      left: 33%;
-    position: fixed;
-    border-radius: 4px;
-     width:400px;
-     height: 440px;
-     margin: 100px auto;
-     background-color: #fff;
-     border:1px solid #888888;
-     padding:15px;
-     text-align:center;
-     z-index: 1000;
+.employee-search {
+	position: absolute;
+	padding-left: 550px;
+	padding-top: 30px;
 }
-
-#modal-img{
-margin-top: 2em;
-border-radius: 70px;
-margin-left: 20px;
+.greyout {
+	opacity: 0.1;
+	filter: alpha(opacity=90);
 }
-
-.modal-content-text-name{
-font-size: 17px;
-padding-bottom: 1em;
-font-weight: bold;
+#employee-table td:hover {
+	background-color: #ff11;
+	border-color: #add8e6;
 }
-
-.modal-content-text-alpha{
-  font-size: 15px;
+.page-header .employee-search input {
+	margin-left: 17em;
+	position: relative;
+	margin-top: 6px;
+	border-radius: 5px;
+	border: 1px solid #eaeaea;
+	padding: 8px 15px;
+	font-size: 14px;
 }
-
-#m-employee-Name{
-  display: inline-block;
-  width: 200px;
-  margin-top: 1em;
-   }
-
-   .firstName {
-       background: #ff0;
-       display:inline-block;
-       width: 25%;
-      text-align: left;
-   }
-
-   .lastName {
-       background: #f0f;
-       display:inline-block;
-       width: auto;
-   }
-
-
-#m-employee-Cell{
-  margin-top: 1.5em;
-   }
-
-#employee-Image{
-  border-radius: 70px;
-  margin-top: 25px;
+th.employee-item {
+	border-color: #DCDCDC;
+	border-radius: 4px;
+	border-width: medium;
 }
-
-.modal-content-text-bravo{
-  font-size: 13px;
+.page-header .employee-search button {
+	border-radius: 5px;
+	border: 1px solid #555;
+	font-size: 14px;
+	padding: 5px;
+	background-color: #555;
+	color: #fff
 }
-
-
+.employee-list {
+	width: 100%;
+}
+.employee-item {
+	border: 2px solid #eaeaea;
+}
+.employee-details {
+	padding-left: 20px;
+	width: 100%;
+	height: 122px;
+	width: 320px;
+	float: left;
+}
+.employee-details .avatar {
+	display: block;
+	width: 100px;
+	height: auto;
+	border-radius: 50px;
+	float: left;
+	margin-top: 10px;
+}
+.Names h2 {
+	padding-top: 12px;
+	font-size: 18px;
+}
+.furtherInfo h2 {
+	color: grey;
+	padding-top: 12px;
+	font-size: 10px;
+}
+.alphas {
+	padding-top: 12px;
+	padding-bottom: 10px;
+	padding-right: 5px;
+	float: left;
+	display: inline-block;
+}
+.bravos {
+	padding-right: 5px;
+	float: left;
+	padding-bottom: -2px;
+	text-align: left;
+	color;
+	#A9A9A9;
+}
+.Names {
+	padding-left: 60px;
+	position: absolute;
+	padding-top: 0px;
+	padding-left: 120px;
+}
+.furtherInfo {
+	position: absolute;
+	padding-top: 46px;
+	padding-left: 120px;
+}
+#modelback {
+	position: fixed;
+	opacity: 0.5;
+	top: 15%;
+	left: 7%;
+	width: 81%;
+	height: 74%;
+	background: #000;
+	text-align: center;
+}
+#modelfront {
+	top: 11%;
+	left: 33%;
+	position: fixed;
+	border-radius: 4px;
+	width: 400px;
+	height: 440px;
+	margin: 100px auto;
+	background-color: #fff;
+	border: 1px solid #888888;
+	padding: 15px;
+	text-align: center;
+	z-index: 1000;
+}
+#modal-img {
+	margin-top: 2em;
+	border-radius: 70px;
+	margin-left: 20px;
+}
+.modal-content-text-name {
+	font-size: 17px;
+	padding-bottom: 1em;
+	font-weight: bold;
+}
+.modal-content-text-alpha {
+	font-size: 15px;
+}
+#m-employee-Name {
+	display: inline-block;
+	width: 200px;
+	margin-top: 1em;
+}
+.firstName {
+	background: #ff0;
+	display: inline-block;
+	width: 25%;
+	text-align: left;
+}
+.lastName {
+	background: #f0f;
+	display: inline-block;
+	width: auto;
+}
+#m-employee-Cell {
+	margin-top: 1.5em;
+}
+#employee-Image {
+	border-radius: 70px;
+	margin-top: 25px;
+}
+.modal-content-text-bravo {
+	font-size: 13px;
+}
 .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
 }
-
 .close:hover,
 .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
 }
